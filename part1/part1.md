@@ -7,7 +7,7 @@ If this were a traditional language like C++ then any variable declared within t
 Unlike to the previous question, `console.log(discountedPrice);` will result in an error. `discountedPrice` is declared with `let` within the scope of the for loop. Therefore, it can only be accessed within the loop. Since the log command is outside, it has no access to that variable so it doesn't know what it's being asked to log, and, therefore, provides a not-defined error.
 
 **Question 3:** *What will happen at line 13 and why?* <br/>
-Line 13, `console.log(finalPrice);` will log, or print, the value of `finalPrice`. In this case, `finalPrice` will be the discounted price of the last item in the prices array. By discounted, we mean that we will have taken the last element in the prices array, applied the discount (e.g. if 50% off of $2 then $1), and rounded it to the nearest whole number.
+Line 13, `console.log(finalPrice);` will log, or print, the value of `finalPrice`. In this case, `finalPrice` will be the discounted price of the last item in the prices array. By discounted, we mean that we will have taken the last element in the prices array, applied the discount (e.g. if 50% off of $2 then $1), and rounded it to the nearest whole number. There are no errors because the variable and log command are withint the same scope (the function).
 
 **Question 4:** *What will the function return if we call discountPrices([100, 200, 300], .5) ? Give a brief explanation.* <br/>
 Given that the first function parameter is `prices` and we are passed `[100,200,300]` there are 3 items so the for loop will run from `i=0` to `i<3`. Therefore, it will iterate through each element of the given array. Let's just take a look at `i=0` and substitute the variable `discount` with the given vallue `0.5`: <br/>
@@ -23,7 +23,13 @@ In line 6, we apply the discount to the current element in the `discountPrices` 
 Once our function runs through the whole array, `[100,200,300]`, we update `discounted` such that `discounted = [50,100,150]` then return this array. Therefore, the functions returns `[50,100,150]`.
 
 **Question 5:** *What will happen at line 11 and why?* <br/>
-Line 11 logs--or prints--the value of i. The for loop ends when `i >= prices.length`. Given that `prices.length = 3`, the loop ends when i is 3. Therefore, this line logs 3.
+Line 11 cannot log the value of i at the end of the for loop because we now have i declared by `let i` which doesn't hoist the value. The log command is outside of the scope of the declaration of i so it has no access. We will get an "i is not defined" error.
 
-**Question 6:**
+**Question 6:** *What will happen at line 12 and why?* <br/>
+Line 12 cannot log the value of `discountPrice` because the variable was declared with `let` within the for loop so its scope is limited to the loop. The log command is outside the scope and has no access so we get another "discountPrice is not defined" error.
 
+**Question 7:** *What will happen at line 13 and why?* <br/>
+Line 13 can log the value of `finalPrice`. Even though `finalPrice` was declared with `let`, its scope is the function `discountPrices` so the log command has access.
+
+**Question 8:** *What will the function return for discountPrices([100, 200, 300], .5)? Give a brief explanation.* <br/>
+The function will return `[50,100,150]`. This function does the exact same things as in Question 4. The only difference is whether variables were declared by `let` or `var`. While the log commands do not have access to `i` or `discountedPrice`, all of the calculations needed to output `discounted` (returned as [50,100,150]) are within the for loop and have the same scope and therefore access.
