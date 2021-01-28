@@ -33,3 +33,16 @@ Line 13 can log the value of `finalPrice`. Even though `finalPrice` was declared
 
 **Question 8:** *What will the function return for discountPrices([100, 200, 300], .5)? Give a brief explanation.* <br/>
 The function will return `[50,100,150]`. This function does the exact same things as in Question 4. The only difference is whether variables were declared by `let` or `var`. While the log commands do not have access to `i` or `discountedPrice`, all of the calculations needed to output `discounted` (returned as [50,100,150]) are within the for loop and have the same scope and therefore access.
+
+**Question 9:** *What will happen at line 11 and why?* <br/>
+This line won't log the value of `i` because there's a glaring error that must be resolved first. This error is the assignment of a `finalPrice` to a value. This variable was declared as a `const` which means it cannot be modified post-assignment. 
+
+**Question 10:** *What will happen at line 12 and why?* <br/>
+This line won't log the value of `discountPrice` because there's a glaring error that must be resolved first. This error is the assignment of a `finalPrice` to a value. This variable was declared as a `const` which means it cannot be modified post-assignment.
+
+**Question 11:** *What will happen at line 13 and why?* <br/>
+This line won't log the value of `finalPrice` because it is a const (cannot be modified post-assignment) and line 7 is trying to assign it which results in an error "invalid assignment to const". 
+
+**Question 12:** *What will the function return for discountPrices([100, 200, 300], .5)? Give a brief explanation.* <br/>
+The function cannot return a value because of the error that was mentioned in the previous three questions. The `const finalPrice` cannot have an assignment.
+
