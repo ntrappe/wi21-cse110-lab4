@@ -35,16 +35,16 @@ Line 13 can log the value of `finalPrice`. Even though `finalPrice` was declared
 The function will return `[50,100,150]`. This function does the exact same things as in Question 4. The only difference is whether variables were declared by `let` or `var`. While the log commands do not have access to `i` or `discountedPrice`, all of the calculations needed to output `discounted` (returned as [50,100,150]) are within the for loop and have the same scope and therefore access.
 
 **Question 9:** *What will happen at line 11 and why?* <br/>
-This line won't log the value of `i` because there's a glaring error that must be resolved first. This error is the assignment of a `finalPrice` to a value. This variable was declared as a `const` which means it cannot be modified post-assignment. 
+This line won't log the value of `i` because there's a glaring error that must be resolved first. This error is the assignment of `finalPrice` to a value. This variable was declared as a `const` which means it cannot be modified post-assignment. 
 
 **Question 10:** *What will happen at line 12 and why?* <br/>
-This line won't log the value of `discountPrice` because there's a glaring error that must be resolved first. This error is the assignment of a `finalPrice` to a value. This variable was declared as a `const` which means it cannot be modified post-assignment.
+Assuming that the assignment error (from Q9) was resolved, line 12 will still result in an error. Line 12 is trying to log the value of `discountedPrice` however this varible was declared as a `const` within the for loop. A `const` declaration doesn't hoist the value so its scope is restricted to the loop it was placed in. Therefore, the log has no access to the variable and results in a not-defined error.
 
 **Question 11:** *What will happen at line 13 and why?* <br/>
-This line won't log the value of `finalPrice` because it is a const (cannot be modified post-assignment) and line 7 is trying to assign it which results in an error "invalid assignment to const". 
+Let us first assume that the assignment error (from Q9) was resolved and the not-defined error (from Q10) was resolved. If this is the case, line 11 does not result in an error. We don't run into any scope issues because the variable we want to log, `finalPrice` is declared as a `const` within the function. Therefore, anything within the function has access. However, we declared that `const finalPrice = 0` and once a `const` variable has been assigned, it cannot be modified. Therefore, it will only ever have the value of 0. Line 13 will log 0.
 
 **Question 12:** *What will the function return for discountPrices([100, 200, 300], .5)? Give a brief explanation.* <br/>
-The function cannot return a value because of the error that was mentioned in the previous three questions. The `const finalPrice` cannot have an assignment.
+Let us assume that the assignment error (from Q9) was resolved and the not-defined error (from Q10) was resolved. As we mentioned in Q11, `finalPrice` has been set to 0, and as a `const` cannot be modified. This means that every iteration of the for loop, the line `discounted.push(finalPrice)` is adding `finalPrice` to the `discounted` array. We are adding 0 to the array each iteration then. So, the function will return `[0,0,0]`.
 
 **Question 13:** *Given the above Object, write the notation for:*
 1. Accessing the value of the name property in the student object: `student.name`
