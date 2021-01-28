@@ -1,18 +1,19 @@
 # wi21-cse110-lab4
 
-### Name: 
-Nicole Trappe
+**Name:** Nicole Trappe
 
-#### UCSD Email:
-ntrappe@ucsd.edu
+**UCSD Email:** ntrappe@ucsd.edu
 
 #### Notes for Me
-To create a Javascript file: `partX-questionY.js` <br/>
+To create a Javascript file: <br/>
+```vim
+    partX-questionY.js
+``` 
 To run the code with Node: `node partX-questionY.js` <br/>
 To run commands without a file (command-D to exit): <br/>
 ```vim
     $ node
-    > '3'+2
+    > '3' + 2
     '32'
     >
 ```
