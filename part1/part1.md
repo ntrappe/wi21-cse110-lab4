@@ -54,8 +54,10 @@ Let us assume that the assignment error (from Q9) was resolved and the not-defin
 5. Access the first index in the array of the courseLoad property of the student object: `student.courseLoad[0]`
 
 **Question 14:** <br/>
-1. '3' + 2 = '32'
-2. '3' - 2 = 1
+1. `'3' + 2 = '32'` <br/>
+   If any operand is a string in the case of a '+' operator, the other one is converted to a string. Therefore, we get string concatenation. <br/>
+2. `'3' - 2 = 1` <br/>
+   Other arithmetic operators, like '-', only work on digits so '3' is converted to a number and we see the subtraction of 2 from 3. <br/>
 3. 3 + null = 3
 4. '3' + null = '3null'
 5. true + 3 = 4
