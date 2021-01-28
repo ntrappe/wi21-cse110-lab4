@@ -53,3 +53,15 @@ The function cannot return a value because of the error that was mentioned in th
 4. Accessing the name property of the object in the Favorite Teacher property in student: `student['Favorite Teacher'].name`
 5. Access the first index in the array of the courseLoad property of the student object: `student.courseLoad[0]`
 
+**Question 14:** <br/>
+1. '3' + 2 = '32'
+2. '3' - 2 = 1
+3. 3 + null = 3
+4. '3' + null = '3null'
+5. true + 3 = 4
+6. false + null = 0
+7. "3" + undefined = '3undefined'
+8. "3" - undefined = NaN
+
+**Question 15:** <br/>
+
