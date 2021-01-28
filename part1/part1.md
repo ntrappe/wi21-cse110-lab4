@@ -46,3 +46,10 @@ This line won't log the value of `finalPrice` because it is a const (cannot be m
 **Question 12:** *What will the function return for discountPrices([100, 200, 300], .5)? Give a brief explanation.* <br/>
 The function cannot return a value because of the error that was mentioned in the previous three questions. The `const finalPrice` cannot have an assignment.
 
+**Question 13:** *Given the above Object, write the notation for:*
+1. Accessing the value of the name property in the student object: `student.name`
+2. Accessing the value of the Grad Year property in the student object: `student['Grad Year']`
+3. Calling the function for the greeting property in the student object: `student.greeting()`
+4. Accessing the name property of the object in the Favorite Teacher property in student: `student['Favorite Teacher'].name`
+5. Access the first index in the array of the courseLoad property of the student object: `student.courseLoad[0]`
+
