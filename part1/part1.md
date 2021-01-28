@@ -43,15 +43,18 @@ Assuming that the assignment error (from Q9) was resolved, line 12 will still re
 **Question 11:** *What will happen at line 13 and why?* <br/>
 Let us first assume that the assignment error (from Q9) was resolved and the not-defined error (from Q10) was resolved. If this is the case, line 11 does not result in an error. We don't run into any scope issues because the variable we want to log, `finalPrice` is declared as a `const` within the function. Therefore, anything within the function has access. However, we declared that `const finalPrice = 0` and once a `const` variable has been assigned, it cannot be modified. Therefore, it will only ever have the value of 0. Line 13 will log 0.
 
+
 **Question 12:** *What will the function return for discountPrices([100, 200, 300], .5)? Give a brief explanation.* <br/>
 Let us assume that the assignment error (from Q9) was resolved and the not-defined error (from Q10) was resolved. As we mentioned in Q11, `finalPrice` has been set to 0, and as a `const` cannot be modified. This means that every iteration of the for loop, the line `discounted.push(finalPrice)` is adding `finalPrice` to the `discounted` array. We are adding 0 to the array each iteration then. So, the function will return `[0,0,0]`.
+
 
 **Question 13:** *Given the above Object, write the notation for:*
 1. Accessing the value of the name property in the student object: `student.name`
 2. Accessing the value of the Grad Year property in the student object: `student['Grad Year']`
 3. Calling the function for the greeting property in the student object: `student.greeting()`
 4. Accessing the name property of the object in the Favorite Teacher property in student: `student['Favorite Teacher'].name`
-5. Access the first index in the array of the courseLoad property of the student object: `student.courseLoad[0]`
+5. Access the first index in the array of the courseLoad property of the student object: `student.courseLoad[0]` 
+
 
 **Question 14:** <br/>
 1. `'3' + 2 = '32'` <br/>
