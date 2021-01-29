@@ -86,3 +86,7 @@ Let us assume that the assignment error (from Q9) was resolved and the not-defin
    For the regular equality operator, when comparing values of different types (boolean vs number), any other values are converted to numbers. Therefore, true is converted to its respective numeric value, 1, and 1 is NOT equal to 2: true. <br/>
 6. `true === Boolean(2) = true` <br/>
    The function, Boolean(), returns either true or false depending on the value of a variable, object, expression, etc. In the case of Boolean(2) it returns true. For the strict equality operator, we have no type conversion. However, the Boolean() method returns a bool. Therefore, we're comparing two bools: true and true. This results in true. <br/>
+
+**Question 16:** *Explain the difference between the == and === operators.* <br/>
+As we mentioned previously, the '==' is called a regular equlity operator. When comparing values of different types, it converts values. For example, given a bool and a number, the bool is converted to a number and the equality is evaluated for both numbers. The '===' is called a struct equality operator. It does NOT convert values of different types. For the previous example, a bool and number, it would immediately return false because they are of different types and cannot be compared.
+
