@@ -90,3 +90,6 @@ Let us assume that the assignment error (from Q9) was resolved and the not-defin
 **Question 16:** *Explain the difference between the == and === operators.* <br/>
 As we mentioned previously, the '==' is called a regular equlity operator. When comparing values of different types, it converts values. For example, given a bool and a number, the bool is converted to a number and the equality is evaluated for both numbers. The '===' is called a struct equality operator. It does NOT convert values of different types. For the previous example, a bool and number, it would immediately return false because they are of different types and cannot be compared.
 
+**Question 17:** *From the code snippet below, explain what gets printed and why.* <br/>
+Let's start with line 1: `if (2 == true)`. We are using a regular equality operator so it will converted the bool, true, to its respective numeric value, 1. So, we are actually asking if `2 == 1`. This is always going to be false so we will never enter line 2 `console.log('Hello!');`. In line 3, `else if(2)`, we are evaluating a single number. As long as this value is NOT 0, null, undefined, NaN, or "", it will be evaluated as true. Therefore, we will always go to line 4, `console.log('How are you?');`. We will never go into the else case because of line 3. To summarize, this code snippet will log "How are you?".
+
