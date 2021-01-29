@@ -47,7 +47,6 @@ Let us first assume that the assignment error (from Q9) was resolved and the not
 **Question 12:** *What will the function return for discountPrices([100, 200, 300], .5)? Give a brief explanation.* <br/>
 Let us assume that the assignment error (from Q9) was resolved and the not-defined error (from Q10) was resolved. As we mentioned in Q11, `finalPrice` has been set to 0, and as a `const` cannot be modified. This means that every iteration of the for loop, the line `discounted.push(finalPrice)` is adding `finalPrice` to the `discounted` array. We are adding 0 to the array each iteration then. So, the function will return `[0,0,0]`.
 
-
 **Question 13:** *Given the above Object, write the notation for:*
 1. Accessing the value of the name property in the student object: `student.name`
 2. Accessing the value of the Grad Year property in the student object: `student['Grad Year']`
@@ -55,18 +54,35 @@ Let us assume that the assignment error (from Q9) was resolved and the not-defin
 4. Accessing the name property of the object in the Favorite Teacher property in student: `student['Favorite Teacher'].name`
 5. Access the first index in the array of the courseLoad property of the student object: `student.courseLoad[0]` 
 
-
 **Question 14:** <br/>
+*Note: single (' ') and double (" ") quotes create string literals in Javascript (rather than char vs string distinction in other languages).* <br/>
 1. `'3' + 2 = '32'` <br/>
    If any operand is a string in the case of a '+' operator, the other one is converted to a string. Therefore, we get string concatenation. <br/>
 2. `'3' - 2 = 1` <br/>
    Other arithmetic operators, like '-', only work on digits so '3' is converted to a number and we see the subtraction of 2 from 3. <br/>
-3. 3 + null = 3
-4. '3' + null = '3null'
-5. true + 3 = 4
-6. false + null = 0
-7. "3" + undefined = '3undefined'
-8. "3" - undefined = NaN
+3. `3 + null = 3` <br/>
+   In the case of the arithmetic, '+' operator, (without strings), null is converted to a number, 0, so we have 3 + 0.  <br/>
+4. `'3' + null = '3null'` <br/>
+   If any operand is a string in the case of a '+' operator, the other one is converted to a string. Therefore, we get string concatenation. <br/>
+5. `true + 3 = 4` <br/>
+   In the case of the arithmetic, '+' operator, (without strings), true is converted to its respective numeric value, 1, so we have 1 + 3.  <br/>
+6. `false + null = 0` <br/>
+   In the case of the arithmetic, '+' operator, (without strings), false is converted to its respective numeric value, 0, and null to 0 so we have 0 + 0.  <br/>
+7. `"3" + undefined = '3undefined'` <br/>
+   If any operand is a string in the case of a '+' operator, the other one is converted to a string. Therefore, we get string concatenation. <br/>
+8. `"3" - undefined = NaN` <br/>
+   The `undefined` keyword means that a variable has ot been assigned a value or declared. Arithmetic operators, like '-', only work on digits so "3" is converted to a number. However subtracting an unassigned value from a value results in `NaN`--"Not-a-Number"--because we cannot yield a meaningful result. <br/>
 
 **Question 15:** <br/>
-
+1. `'2' > 1 = true` <br/>
+   For the comparator operator, when comparing values of different types (string vs number), any other values are converted to numbers. Therefore, '2' becomes 2 and 2 is greater than 1: true. <br/>
+2. `'2' < '12' = false` <br/>
+   When comparing values of the same type, if they are strings, they are compared character by character acording to their Unicode/ascii encoding. In this case, the first character in each string is '2' and '1'. '2' has a higher encoding than '1' and is larger. Therefore, this expression is false.  <br/>
+3. `2 == '2' = true` <br/>
+   For the regular equality operator, when comparing values of different types (string vs number), any other values are converted to numbers. Therefore, '2' becomes 2 and 2 does equal 2: true. <br/>
+4. `2 === '2' = false` <br/>
+   For the strict equality operator, it checks the values without type conversion. This means, we are comparing a number to a string, and as they are of different types, it immediately returns false. <br/>
+5. `true == 2 = false` <br/>
+   For the regular equality operator, when comparing values of different types (boolean vs number), any other values are converted to numbers. Therefore, true is converted to its respective numeric value, 1, and 1 is NOT equal to 2: true. <br/>
+6. `true === Boolean(2) = true` <br/>
+   The function, Boolean(), returns either true or false depending on the value of a variable, object, expression, etc. In the case of Boolean(2) it returns true. For the strict equality operator, we have no type conversion. However, the Boolean() method returns a bool. Therefore, we're comparing two bools: true and true. This results in true. <br/>
