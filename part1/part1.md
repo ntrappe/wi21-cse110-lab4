@@ -93,3 +93,6 @@ As we mentioned previously, the '==' is called a regular equlity operator. When 
 **Question 17:** *From the code snippet below, explain what gets printed and why.* <br/>
 Let's start with line 1: `if (2 == true)`. We are using a regular equality operator so it will converted the bool, true, to its respective numeric value, 1. So, we are actually asking if `2 == 1`. This is always going to be false so we will never enter line 2 `console.log('Hello!');`. In line 3, `else if(2)`, we are evaluating a single number. As long as this value is NOT 0, null, undefined, NaN, or "", it will be evaluated as true. Therefore, we will always go to line 4, `console.log('How are you?');`. We will never go into the else case because of line 3. To summarize, this code snippet will log "How are you?".
 
+**Question 18:** *Given the below Object, write a for...in loop that will iterate through it and print out the value of the property if the property starts with the letter r, or if the value of that property is an odd number.* <br/>
+Code is in `part1-question18.js`.
+
