@@ -96,3 +96,18 @@ Let's start with line 1: `if (2 == true)`. We are using a regular equality opera
 **Question 18:** *Given the below Object, write a for...in loop that will iterate through it and print out the value of the property if the property starts with the letter r, or if the value of that property is an odd number.* <br/>
 Code is in `part1-question18.js`.
 
+**Question 19:** *If the function below is called with the following parameters modifyArray([1,2,3], doSomething), what will be the result?* <br/>
+On the first iteration of the for loop in modifyArray, i = 0 so we want to push the result of `callback(array[0], function(x) { return x*2;})`. DoSomemething, given as the callback function, is passed 1 (value of array[0]), so it adds 2 and returns 3. It is then passed to function(x) where it multiplies 3 and 2 to get 6. The value 6 is pushed to the array `newArr`. Similarly, when i = 0, we have `arrary[1] = 2` which is first incremented by 2 to get 4 in *doSomething* then multiplied by 2 to get 8 in *function(x)*. Finally, when i = 2, we have `array[2] = 3` which is incremented by 2 then multiplied by 2 to get 10. The result is [6,8,10].
+
+**Question 20:** *This program only prints out the time once when executed. Modify this code such that the program prints out the time every second.* <br/>
+Code is in `part1-question20.js`.
+
+**Question 21:** *What is the output of this code?* <br/>
+In line 2, we will log--or print--1 without any time constraints. In line 3, we have set a timeout such that the console will only exectute the function--logging 2--after 1 second has passed (1000ms = 1s). In line 4, the console will only execute this function--logging 3--after 0ms have passed. Line 5 will log 4 without any time constraints. Because lines 2 and 5 don't have time constraints, they will be printed out first in chronological order. Line 3 will take the longest with a whole timeout period of 1000ms. Line 4 should happen before line 3 but after lines 2 and 5.
+
+Result: <br/>
+1 <br/>
+4 <br/>
+3 <br/>
+2 
+
