@@ -105,7 +105,7 @@ Code is in `part1-question20.js`.
 **Question 21:** *What is the output of this code?* <br/>
 In line 2, we will log--or print--1 without any time constraints. In line 3, we have set a timeout such that the console will only exectute the function--logging 2--after 1 second has passed (1000ms = 1s). In line 4, the console will only execute this function--logging 3--after 0ms have passed. Line 5 will log 4 without any time constraints. Because lines 2 and 5 don't have time constraints, they will be printed out first in chronological order. Line 3 will take the longest with a whole timeout period of 1000ms. Line 4 should happen before line 3 but after lines 2 and 5.
 
-Result: <br/>
+**Output:** <br/>
 1 <br/>
 4 <br/>
 3 <br/>
