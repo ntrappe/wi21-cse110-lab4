@@ -11,12 +11,7 @@ The bug is that both "first number" and "second number" inputs are strings. When
 
 To fix this, we need to ensure that both inputs are converted to numbers so we do not do string concatenation. We can use function like `Number()` which converst a string to a number or `parseInt()` that converts to a whole number.
 
-```javascript
-function calculateSum(num1, num2) {
-    let result = Number(num1) + Number(num2)    // my fix
-    return result
-}
-```
+![code](code.png)
 
 ---
 
