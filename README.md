@@ -4,6 +4,8 @@
 
 **UCSD Email:** ntrappe@ucsd.edu
 
+**Note:** In part 2, the drawio.png is HUGE. So if it's hard to look at, I've included a smaller version in that dir called `part2_small.png`.
+
 ---
 
 #### Notes for Me
