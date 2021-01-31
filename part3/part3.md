@@ -19,7 +19,7 @@ To fix this, we need to ensure that both inputs are converted to numbers so we d
 1. What is the name of the new json file? `citylots.json`
 2. Which file initiated the download of the new file? `part2.js`
 3. What is its file size? `11.1 MB`.
-4. How long did it take to download? `0.8 ms`
+4. How long did it take to download? `129 ms`
 5. What was your User-Agent for the browser that made the request? `Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:84.0) Gecko/20100101 Firefox/84.0`
 6. In the response, what type of server did it come from? `Apache`
 7. When was the file last modified? `Tue, 26 Jan 2021 22:14:13 GMT`
