@@ -1,7 +1,7 @@
 # Part 3 Responses
 
 #### Screenshots
-Breakpoint at initialization of the local variable result in calculateSum()
-
-![breakpt](breakpoint.png)
+Screenshot below show code to the left and the breakpoints and watch expressions to the right.
+ 
+![breakpt](breakpt_watch.png)
 
