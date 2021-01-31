@@ -27,6 +27,6 @@ To fix this, we need to ensure that both inputs are converted to numbers so we d
 9.  Which method inside the initiating file made the request? `fetchData()`
 
 
-Evidence:
+**Evidence:**
 ![time](timing.png) <br/>
 ![size](size.png)
