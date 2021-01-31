@@ -19,9 +19,11 @@ To fix this, we need to ensure that both inputs are converted to numbers so we d
 1. What is the name of the new json file? `citylots.json`
 2. Which file initiated the download of the new file? `part2.js`
 3. What is its file size? `53 B`.
-4. How long did it take to download? `0.1 ms`
+    - ![size](size.png)
+4. How long did it take to download? `0.0 ms`
+   - ![time](timing.png)
 5. What was your User-Agent for the browser that made the request? `Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:84.0) Gecko/20100101 Firefox/84.0`
 6. In the response, what type of server did it come from? `Apache`
 7. When was the file last modified? `Tue, 26 Jan 2021 22:14:13 GMT`
 8. What was the Content-Type of the file? `application/json`
-9. Which method inside the initiating file made the request? `fetchData()`
+9.  Which method inside the initiating file made the request? `fetchData()`
